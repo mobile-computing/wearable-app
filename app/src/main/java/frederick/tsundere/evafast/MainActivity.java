@@ -2,7 +2,7 @@ package frederick.tsundere.evafast;
 
 import android.os.Bundle;
 import android.support.wearable.activity.WearableActivity;
-import android.support.wearable.view.BoxInsetLayout;
+import android.support.wear.widget.BoxInsetLayout;
 import android.view.View;
 import android.widget.TextView;
 
@@ -28,6 +28,8 @@ public class MainActivity extends WearableActivity {
         mContainerView = (BoxInsetLayout) findViewById(R.id.container);
         mTextView = (TextView) findViewById(R.id.text);
         mClockView = (TextView) findViewById(R.id.clock);
+
+        mTextView.setText(String.format("Hello Java: %s", System.getProperty("java.version")));
     }
 
     @Override
@@ -50,14 +52,14 @@ public class MainActivity extends WearableActivity {
 
     private void updateDisplay() {
         if (isAmbient()) {
-            mContainerView.setBackgroundColor(getResources().getColor(android.R.color.black));
-            mTextView.setTextColor(getResources().getColor(android.R.color.white));
+            mContainerView.setBackgroundColor(getColor(R.color.black));
+            mTextView.setTextColor(getColor(R.color.white));
             mClockView.setVisibility(View.VISIBLE);
 
             mClockView.setText(AMBIENT_DATE_FORMAT.format(new Date()));
         } else {
             mContainerView.setBackground(null);
-            mTextView.setTextColor(getResources().getColor(android.R.color.black));
+            mTextView.setTextColor(getColor(R.color.black));
             mClockView.setVisibility(View.GONE);
         }
     }
