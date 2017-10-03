@@ -47,11 +47,7 @@ public class MainActivity extends WearableActivity implements SensorEventListene
         // Enables Always-on
         setAmbientEnabled();
 
-        mImageViewHeart.setImageDrawable(getDrawable(R.drawable.ic_heart_red_noun_625027_ec5d57));
         mTextViewHeart.setText("95");
-        mImageViewArrow.setImageDrawable(getDrawable(R.drawable.ic_arrow_noun_816167));
-        mImageViewExtinguisher.setImageDrawable(getDrawable(R.drawable.ic_fire_extinguisher_green_noun_656279_70c041));
-        mImageViewHose.setImageDrawable(getDrawable(R.drawable.ic_fire_hose_black_noun_656280));
         mTextViewRemain.setText("320 metres remaining\nETA: 7 minutes");
         mMainContainer.setOnTouchListener(new OnSwipeTouchListener(MainActivity.this) {
             @Override

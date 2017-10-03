@@ -27,19 +27,23 @@
                 android:id="@+id/imageview_extinguisher"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:layout_gravity="top" />
+                android:layout_gravity="top"
+                android:src="@drawable/ic_fire_extinguisher_green_noun_836243_70c041" />
 
             <ImageView
                 android:id="@+id/imageview_hose"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:layout_gravity="top" />
+                android:layout_gravity="top"
+                android:src="@drawable/ic_fire_hose_black_noun_88915" />
+
 
             <ImageView
                 android:id="@+id/imageview_heart"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:layout_gravity="top" />
+                android:layout_gravity="top"
+                android:src="@drawable/ic_heart_red_noun_625027_ec5d57" />
 
             <TextView
                 android:id="@+id/textview_heart"
@@ -56,7 +60,8 @@
             android:layout_width="90dp"
             android:layout_height="90dp"
             android:layout_gravity="end"
-            android:layout_marginTop="20dp" />
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_arrow_noun_816167" />
 
         <TextView
             android:id="@+id/textview_remain"
