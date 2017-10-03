@@ -5,6 +5,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="28dp"
     tools:context="frederick.tsundere.evafast.MainActivity"
     tools:deviceIds="wear">
 

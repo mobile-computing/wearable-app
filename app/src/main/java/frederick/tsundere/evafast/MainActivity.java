@@ -1,8 +1,9 @@
 package frederick.tsundere.evafast;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.wearable.activity.WearableActivity;
 import android.support.wear.widget.BoxInsetLayout;
+import android.support.wearable.activity.WearableActivity;
 import android.view.View;
 import android.widget.TextView;
 
@@ -10,8 +11,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-public class MainActivity extends WearableActivity {
+import frederick.tsundere.evafast.listener.OnSwipeTouchListener;
 
+public class MainActivity extends WearableActivity {
     private static final SimpleDateFormat AMBIENT_DATE_FORMAT =
             new SimpleDateFormat("HH:mm", Locale.US);
 
@@ -29,7 +31,21 @@ public class MainActivity extends WearableActivity {
         mTextView = (TextView) findViewById(R.id.text);
         mClockView = (TextView) findViewById(R.id.clock);
 
-        mTextView.setText(String.format("Hello Java: %s", System.getProperty("java.version")));
+        mContainerView.setOnTouchListener(new OnSwipeTouchListener(MainActivity.this) {
+            @Override
+            public boolean onSwipeLeft() {
+                Intent actionActivityIntent = new Intent(MainActivity.this, ActionActivity.class);
+                startActivity(actionActivityIntent);
+                return true;
+            }
+
+            @Override
+            public boolean onSwipeUp() {
+                Intent actionActivityIntent = new Intent(MainActivity.this, ActionActivity.class);
+                startActivity(actionActivityIntent);
+                return true;
+            }
+        });
     }
 
     @Override
