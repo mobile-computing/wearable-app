@@ -23,36 +23,61 @@
             android:layout_gravity="start"
             android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/imageview_extinguisher"
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_gravity="top"
-                android:src="@drawable/ic_fire_extinguisher_green_noun_836243_70c041" />
+                android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/imageview_hose"
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_circle_arrow_noun_132680_f38f19" />
+
+                <ImageView
+                    android:id="@+id/imageview_extinguisher"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_fire_extinguisher_green_noun_836243_70c041" />
+            </FrameLayout>
+
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_gravity="top"
-                android:src="@drawable/ic_fire_hose_black_noun_88915" />
+                android:layout_height="wrap_content">
 
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_circle_arrow_noun_132680_f38f19"
+                    android:visibility="invisible" />
 
-            <ImageView
-                android:id="@+id/imageview_heart"
+                <ImageView
+                    android:id="@+id/imageview_hose"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_fire_hose_black_noun_88915" />
+            </FrameLayout>
+
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_gravity="top"
-                android:src="@drawable/ic_heart_red_noun_625027_ec5d57" />
+                android:layout_height="34dp">
 
-            <TextView
-                android:id="@+id/textview_heart"
-                android:layout_width="match_parent"
-                android:layout_height="14dp"
-                android:layout_gravity="bottom"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="12sp" />
+                <ImageView
+                    android:id="@+id/imageview_heart"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_heart_red_noun_625027_ec5d57" />
+
+                <TextView
+                    android:id="@+id/textview_heart"
+                    android:layout_width="match_parent"
+                    android:layout_height="14dp"
+                    android:layout_gravity="bottom"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+            </FrameLayout>
         </LinearLayout>
 
         <ImageView
