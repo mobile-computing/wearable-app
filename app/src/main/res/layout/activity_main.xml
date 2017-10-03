@@ -17,11 +17,26 @@
         android:padding="@dimen/inner_frame_layout_padding"
         app:layout_box="all">
 
-        <ImageView
-            android:id="@+id/imageview_heart"
+        <FrameLayout
             android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_gravity="start" />
+            android:layout_height="44dp"
+            android:layout_gravity="start">
+
+            <ImageView
+                android:id="@+id/imageview_heart"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="top" />
+
+            <TextView
+                android:id="@+id/textview_heart"
+                android:layout_width="match_parent"
+                android:layout_height="14dp"
+                android:layout_gravity="bottom"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+        </FrameLayout>
 
         <ImageView
             android:id="@+id/imageview_arrow"
