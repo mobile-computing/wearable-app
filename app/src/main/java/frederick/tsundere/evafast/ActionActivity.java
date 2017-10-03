@@ -19,6 +19,12 @@ public class ActionActivity extends WearableActivity {
 
         mActionContainer.setOnTouchListener(new OnSwipeTouchListener(ActionActivity.this) {
             @Override
+            public boolean onSwipeRight() {
+                finish();
+                return true;
+            }
+
+            @Override
             public boolean onSwipeDown() {
                 finish();
                 return true;
