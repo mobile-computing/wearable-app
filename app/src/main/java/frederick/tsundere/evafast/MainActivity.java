@@ -25,6 +25,8 @@ public class MainActivity extends WearableActivity implements SensorEventListene
     private FrameLayout mFrameLayoutMain;
     private ImageView mImageViewHeart;
     private ImageView mImageViewArrow;
+    private ImageView mImageViewExtinguisher;
+    private ImageView mImageViewHose;
     private TextView mTextViewRemain;
     private TextView mTextViewHeart;
 
@@ -37,6 +39,8 @@ public class MainActivity extends WearableActivity implements SensorEventListene
         mFrameLayoutMain = (FrameLayout) findViewById(R.id.framelayout_main);
         mImageViewHeart = (ImageView) findViewById(R.id.imageview_heart);
         mImageViewArrow = (ImageView) findViewById(R.id.imageview_arrow);
+        mImageViewExtinguisher = (ImageView) findViewById(R.id.imageview_extinguisher);
+        mImageViewHose = (ImageView) findViewById(R.id.imageview_hose);
         mTextViewRemain = (TextView) findViewById(R.id.textview_remain);
         mTextViewHeart = (TextView) findViewById(R.id.textview_heart);
 
@@ -46,6 +50,8 @@ public class MainActivity extends WearableActivity implements SensorEventListene
         mImageViewHeart.setImageDrawable(getDrawable(R.drawable.ic_heart_red_noun_625027_ec5d57));
         mTextViewHeart.setText("95");
         mImageViewArrow.setImageDrawable(getDrawable(R.drawable.ic_arrow_noun_816167));
+        mImageViewExtinguisher.setImageDrawable(getDrawable(R.drawable.ic_fire_extinguisher_green_noun_656279_70c041));
+        mImageViewHose.setImageDrawable(getDrawable(R.drawable.ic_fire_hose_black_noun_656280));
         mTextViewRemain.setText("320 metres remaining\nETA: 7 minutes");
         mMainContainer.setOnTouchListener(new OnSwipeTouchListener(MainActivity.this) {
             @Override
