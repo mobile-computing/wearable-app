@@ -3,7 +3,7 @@ package frederick.tsundere.evafast;
 import android.os.Bundle;
 import android.support.wearable.activity.WearableActivity;
 import android.support.wearable.view.BoxInsetLayout;
-import android.widget.Toast;
+import android.view.KeyEvent;
 
 import frederick.tsundere.evafast.listener.OnSwipeTouchListener;
 
@@ -20,7 +20,6 @@ public class ActionActivity extends WearableActivity {
         mActionContainer.setOnTouchListener(new OnSwipeTouchListener(ActionActivity.this) {
             @Override
             public boolean onSwipeDown() {
-                Toast.makeText(ActionActivity.this, "Triggered", Toast.LENGTH_SHORT).show();
                 finish();
                 return true;
             }
@@ -28,5 +27,16 @@ public class ActionActivity extends WearableActivity {
 
         // Enables Always-on
         setAmbientEnabled();
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        switch (keyCode) {
+            case KeyEvent.KEYCODE_NAVIGATE_PREVIOUS:
+                finish();
+                return true;
+            default:
+                return super.onKeyDown(keyCode, event);
+        }
     }
 }

@@ -11,15 +11,31 @@
     tools:deviceIds="wear">
 
     <FrameLayout
+        android:id="@+id/framelayout_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="@dimen/inner_frame_layout_padding"
         app:layout_box="all">
 
         <ImageView
+            android:id="@+id/imageview_heart"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="start" />
+
+        <ImageView
             android:id="@+id/imageview_arrow"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="110dp"
+            android:layout_gravity="top" />
+
+        <TextView
+            android:id="@+id/textview_remain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
 
     </FrameLayout>
 </android.support.wearable.view.BoxInsetLayout>

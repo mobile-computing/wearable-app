@@ -2,15 +2,17 @@
 <android.support.wearable.view.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_action"
+    style="@style/DismissSwipeRightStyle"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
     android:padding="@dimen/box_inset_layout_padding"
-    android:id="@+id/container_action"
     tools:context="frederick.tsundere.evafast.ActionActivity"
     tools:deviceIds="wear">
 
     <FrameLayout
+        style="@style/DismissSwipeRightStyle"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="@dimen/inner_frame_layout_padding"
