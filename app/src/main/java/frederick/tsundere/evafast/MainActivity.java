@@ -48,7 +48,7 @@ public class MainActivity extends WearableActivity implements SensorEventListene
         setAmbientEnabled();
 
         mTextViewHeart.setText("95");
-        mTextViewRemain.setText("320 metres remaining\nETA: 7 minutes");
+        mTextViewRemain.setText("122 metres remaining\nETA: 7 minutes");
         mMainContainer.setOnTouchListener(new OnSwipeTouchListener(MainActivity.this) {
             @Override
             public boolean onSwipeLeft() {
